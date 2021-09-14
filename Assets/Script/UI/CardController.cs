@@ -48,7 +48,7 @@ public class CardController : MonoBehaviour
     // Allow only one for its type.
     if(generateTaskCard.isOnlyOneTypeInList){
       foreach(Transform existCard in transform){
-        if(existCard.GetComponent<CardUI>().GetType() == generateTaskCard.taskCard.GetType()){
+        if(existCard.GetComponent<CardUI>().GetCardType() == generateTaskCard.taskCard.type){
           // found an exist card type
           // random a new one
             return GetNewCard();

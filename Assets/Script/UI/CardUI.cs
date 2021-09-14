@@ -47,4 +47,8 @@ public class CardUI : MonoBehaviour
     return this.card.GetCardTitle();
   }
 
+  public TaskCard.CardType GetCardType(){
+    return this.card.type;
+  }
+
 }
