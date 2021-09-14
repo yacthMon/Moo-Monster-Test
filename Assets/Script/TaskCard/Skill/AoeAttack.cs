@@ -5,6 +5,7 @@ public class AoeAttack : TaskCard
 {
   [SerializeField]
   float damagePercent;
+  public override CardType type { get { return CardType.aoe_attack; }}
   
   public override void Action(){
     int damageToDeal = (int)(this.character.GetATK() * damagePercent);
