@@ -66,6 +66,17 @@ public class CardController : MonoBehaviour
     return newCard;
   }
 
+  public void RemoveOnHandCard(string cardTitle, bool isReplaceNewCard = false){
+    foreach(Transform existCard in transform){
+      if (existCard.GetComponent<CardUI>().GetCardTitle() == cardTitle) {
+        Destroy(existCard);
+        if(isReplaceNewCard){
+          this.GetNewCard();
+        }
+      }
+    }
+  }
+
   public void RemoveTaskCardByName(string taskCardName){
     CardGenerateDetail toRemove = generateTaskCardList.Find((CardGenerateDetail detailToRemove) => detailToRemove.taskCard.GetCardTitle() == taskCardName);
     generateTaskCardList.Remove(toRemove);
