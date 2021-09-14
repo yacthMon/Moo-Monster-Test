@@ -11,6 +11,8 @@ public abstract class TaskCard : ScriptableObject
   public Character character {private set; get;}
 
   public abstract void Action();
+  
+  public virtual void Mount(){}
 
   public bool isAvailable(){
     return false;

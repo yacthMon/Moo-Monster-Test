@@ -29,6 +29,7 @@ public class CardUI : MonoBehaviour
   }
   
   public void SetCard(TaskCard card){
+    card.Mount();
     this.card = card;
     manaCostTxt.text = card.GetCardManaCost()+"";
     cardTitleTxt.text = card.GetCardTitle();
