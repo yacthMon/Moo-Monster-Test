@@ -24,6 +24,7 @@ public class Character : MonoBehaviour
   
   public TaskCard blueSkill;
   public TaskCard yellowSkill;
+  public bool isEvolution = false;
 
   public bool isDead {private set; get;}
 
@@ -86,6 +87,7 @@ public class Character : MonoBehaviour
           CardController.instance.AddTaskCard(yellowSkill, this);
           break;
     }
+    isEvolution = true;
     GetComponent<CharacterDisplay>().ChangeCharacter(index);
   }
 

@@ -9,7 +9,22 @@ public class Evolution : TaskCard
   int atkBonus;
   [SerializeField]
   float atkSpeedBonus;
-  
+
+  public override void Mount(){
+    if(this.character.isEvolution){
+      Character[] characters = PlayerController.instance.GetAllCharacter();
+      foreach(Character character in characters){
+        if(character.GetCharacterName() != this.character.GetCharacterName() && !character.isEvolution){
+          // set to other chracter that doesn't evolution yet
+          this.SetCharacter(character);
+          return;
+        }
+      }
+      // no other character available to evolution
+      // replace with new card
+      CardController.instance.RemoveOnHandCard(this.GetCardTitle(), true);
+    }
+  }
   
   public override void Action(){
     this.character.Evolution(spriteIndex,atkBonus,atkSpeedBonus);
