@@ -9,6 +9,7 @@ public class Evolution : TaskCard
   int atkBonus;
   [SerializeField]
   float atkSpeedBonus;
+  public override CardType type { get { return CardType.evolution; }}
 
   public override void Mount(){
     if(this.character.isEvolution){

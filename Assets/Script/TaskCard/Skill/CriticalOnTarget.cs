@@ -5,7 +5,8 @@ public class CriticalOnTarget : TaskCard
 {
   [SerializeField]
   int criticalRate;
-  
+  public override CardType type { get { return CardType.attack; }}
+
   public override void Action(){
     int damageToDeal = this.character.GetATK() * criticalRate;
     this.character.GetTarget()?.ReceiveDamage(damageToDeal);

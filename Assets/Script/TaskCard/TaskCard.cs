@@ -3,11 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 public abstract class TaskCard : ScriptableObject
 {
+  public enum CardType {
+    attack,
+    buff,
+    aoe_attack,
+    evolution,
+  }
   [SerializeField]
   private int manaCost = 1;
   [SerializeField]
   private string cardTitle = "";
   
+  public abstract CardType type { get;}
+
   public Character character {private set; get;}
 
   public abstract void Action();

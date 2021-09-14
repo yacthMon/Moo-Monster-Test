@@ -5,6 +5,7 @@ public class HealSelf : TaskCard
 {
   [SerializeField]
   int healPoint;
+  public override CardType type { get { return CardType.buff; }}
   
   public override void Action(){
     this.character.RestoreHealth(healPoint);
