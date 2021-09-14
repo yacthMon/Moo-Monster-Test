@@ -657,21 +657,27 @@ MonoBehaviour:
   - taskCard: {fileID: 11400000, guid: 472f738b20bbe7240bfa6c7994390832, type: 2}
     specificCharacter: {fileID: 0}
     isOnlyOne: 0
+    isOnlyOneTypeInList: 0
   - taskCard: {fileID: 11400000, guid: dc38c794ecb3e0a47b1528303a667896, type: 2}
     specificCharacter: {fileID: 0}
     isOnlyOne: 0
+    isOnlyOneTypeInList: 0
   - taskCard: {fileID: 11400000, guid: 53c65f52fe5edfb4c93949639d9cabd6, type: 2}
     specificCharacter: {fileID: 0}
     isOnlyOne: 0
+    isOnlyOneTypeInList: 0
   - taskCard: {fileID: 11400000, guid: 0d2d0e051e9d56a49831bbed62f779b6, type: 2}
     specificCharacter: {fileID: 0}
     isOnlyOne: 0
+    isOnlyOneTypeInList: 0
   - taskCard: {fileID: 11400000, guid: 646c7a9c82127734a8165ea7e3072b7f, type: 2}
     specificCharacter: {fileID: 0}
     isOnlyOne: 1
+    isOnlyOneTypeInList: 1
   - taskCard: {fileID: 11400000, guid: ccf5f4014b101664797c294a1f6b5458, type: 2}
     specificCharacter: {fileID: 0}
     isOnlyOne: 1
+    isOnlyOneTypeInList: 1
   card: {fileID: 7514587405201395200, guid: 9de8247f2f03b5d44a59dcdafe83d43a, type: 3}
   newCardSpeed: 3
 --- !u!1 &853862030

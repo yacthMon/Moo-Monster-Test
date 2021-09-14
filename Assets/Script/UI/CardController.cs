@@ -45,6 +45,16 @@ public class CardController : MonoBehaviour
     if(transform.childCount > maxCard) return null;
     // TaskCard taskCard = taskCardList[Random.Range(0,taskCardList.Count)];
     CardGenerateDetail generateTaskCard = generateTaskCardList[UnityEngine.Random.Range(0,generateTaskCardList.Count)];
+    // Allow only one for its type.
+    if(generateTaskCard.isOnlyOneTypeInList){
+      foreach(Transform existCard in transform){
+        if(existCard.GetComponent<CardUI>().GetType() == generateTaskCard.taskCard.GetType()){
+          // found an exist card type
+          // random a new one
+            return GetNewCard();
+        }
+      }
+    }
     if(generateTaskCard.isOnlyOne){
       foreach(Transform existCard in transform){
         if(existCard.GetComponent<CardUI>().GetCardTitle() == generateTaskCard.taskCard.GetCardTitle()){
@@ -55,7 +65,6 @@ public class CardController : MonoBehaviour
           }
         }
       }
-      
     }
     TaskCard taskCard = generateTaskCard.taskCard;
     GameObject newCard = GameObject.Instantiate(card, this.transform);
@@ -86,7 +95,8 @@ public class CardController : MonoBehaviour
     CardGenerateDetail generateDetail = new CardGenerateDetail(){
       taskCard = taskCard,
       specificCharacter = specificCharacter,
-      isOnlyOne = isOnlyOne
+      isOnlyOne = isOnlyOne,
+      isOnlyOneTypeInList = false,
     };
     generateTaskCardList.Add(generateDetail);
   }
@@ -98,4 +108,5 @@ class CardGenerateDetail {
   public TaskCard taskCard;
   public Character specificCharacter;
   public bool isOnlyOne;
+  public bool isOnlyOneTypeInList;
 }
