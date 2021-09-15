@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 145dcc87bf7dfb941afea7c1de255997, type: 3}
   m_Name: Evolution_Blue
   m_EditorClassIdentifier: 
-  manaCost: 5
+  manaCost: 10
   cardTitle: Evo Blue
   spriteIndex: 3
   atkBonus: 3

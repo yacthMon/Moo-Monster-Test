@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 985309d8ae6bead43b759809b7d0afb6, type: 3}
   m_Name: ThunderATK
   m_EditorClassIdentifier: 
-  manaCost: 3
+  manaCost: 5
   cardTitle: Thunder
   damagePercent: 1.5
